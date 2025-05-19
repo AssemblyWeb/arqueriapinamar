@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arquería Pinamar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <div class="logo-circle me-2">AP</div>
+          <span>Arquería Pinamar</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#propuesta">Propuesta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#beneficios">Beneficios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#practica">Práctica</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#equipamiento">Equipamiento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexto">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ubicacion">Ubicación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+          <a href="#contacto" class="btn btn-gold ms-lg-3">Inscribite</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+ <!-- Hero Carousel Section -->
+ <section class="hero-carousel">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- Slide 1 - Main Club -->
+      <div class="carousel-item active">
+        <div class="hero-overlay"></div>
+        <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Arquería Pinamar">
+        <div class="carousel-caption">
+          <h1 class="display-4 fw-bold text-black mb-3">
+            ARQUERÍA PINAMAR
+          </h1>
+          <p class="lead mb-4 text-black">
+            Descubrí el arte del tiro con arco en un entorno natural único. Aprendé, practicá y competí en nuestro club en medio del bosque.
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+            <a href="#contacto" class="btn btn-gold btn-lg">
+              Únete al Club <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+            <a href="#propuesta" class="btn btn-outline-gold btn-lg">
+              Conoce Más
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 - Liga 3D -->
+      <div class="carousel-item">
+        <div class="hero-overlay"></div>
+        <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Liga Pinamarense de Arquería 3D">
+        <div class="carousel-caption">
+          <h1 class="display-4 fw-bold text-black mb-3">
+            LIGA PINAMARENSE DE ARQUERÍA 3D
+          </h1>
+          <p class="lead mb-4 text-black">
+            Participa en nuestra liga local y compite con los mejores arqueros de la región en emocionantes torneos 3D.
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+            <a href="#liga" class="btn btn-gold btn-lg">
+              Ver Ranking <i class="fas fa-trophy ms-2"></i>
+            </a>
+            <a href="#liga" class="btn btn-outline-gold btn-lg">
+              Próximos Torneos
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 - Clases -->
+      <div class="carousel-item">
+        <div class="hero-overlay"></div>
+        <img src="https://placehold.co/1920x1080" class="d-block w-100" alt="Clases de Arquería">
+        <div class="carousel-caption">
+          <h1 class="display-4 fw-bold text-black mb-3">
+            CLASES PARA TODOS LOS NIVELES
+          </h1>
+          <p class="lead mb-4 text-black">
+            Desde principiantes hasta competidores avanzados, tenemos programas adaptados a cada nivel a partir de los 10 años de edad.
+          </p>
+          <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+            <a href="#practica" class="btn btn-gold btn-lg">
+              Horarios <i class="fas fa-clock ms-2"></i>
+            </a>
+            <a href="#contacto" class="btn btn-outline-gold btn-lg">
+              Consultar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+</section>
+
+
+<!-- Propuesta Section -->
+<section id="propuesta" class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold mb-4">Club escuela de Arquería 3D en Pinamar</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="text-gold mb-4">
+              <i class="fa-solid fa-bullseye fa-3x"></i>
+            </div>
+            <p class="card-text">
+              Somos un club dedicado a la enseñanza y práctica del tiro con arco en un entorno natural privilegiado.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="text-gold mb-4">
+              <i class="fas fa-medal fa-3x"></i>
+            </div>
+            <p class="card-text">
+              Ofrecemos una escuela de arquería con proyección para representación en torneos. Nuestro objetivo es formar arqueros desde el nivel inicial hasta la competición.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm text-center">
+          <div class="card-body">
+            <div class="text-gold mb-4">
+              <i class="fas fa-graduation-cap fa-3x"></i>
+            </div>
+            <p class="card-text">
+              Contamos con instructores calificados que te guiarán en todo el proceso de aprendizaje, desde los fundamentos básicos hasta técnicas avanzadas de tiro con arco.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Benefits Section -->
+  <section id="beneficios" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Beneficios</h2>
+        <p class="lead">El tiro con arco ofrece numerosos beneficios para la salud física y mental.</p>
+      </div>
+
+      
+      
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="text-gold mb-3">
+                <i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold">Mejora la coordinación</h3>
+              <p class="card-text">Mejora la coordinación óculo-motriz</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="text-gold mb-3">
+                <i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold">Conexión con la naturaleza</h3>
+              <p class="card-text">Conecta con la naturaleza en un entorno único</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="text-gold mb-3">
+                <i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold">Fortalece los músculos</h3>
+              <p class="card-text">Fortalece los músculos de la espalda y los brazos</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="text-gold mb-3">
+                <i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold">Socialización</h3>
+              <p class="card-text">Ayuda a socializar con personas de intereses similares</p>
+            </div>
+          </div>
+        </div>
+        
+   
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="text-gold mb-3">
+                <i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold">Actividad terapéutica</h3>
+              <p class="card-text">Es una actividad deportivo-terapéutica que ha ganado fuerza en los últimos años</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="text-gold mb-3">
+                <i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold">Condición física</h3>
+              <p class="card-text">Mejora la condición física general</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="text-gold mb-3">
+                <i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold">Inclusivo</h3>
+              <p class="card-text">Es practicable por personas de toda condición</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="text-gold mb-3">
+                <i class="fas fa-check-circle fa-2x"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold">Similar al golf</h3>
+              <p class="card-text">Tiene grandes similitudes con el golf en cuanto a concentración y precisión</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Section -->
+  <section id="practica" class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Dinámica de la Práctica</h2>
+        <p class="lead">Nuestras sesiones están estructuradas para garantizar un aprendizaje progresivo y seguro.</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="number-circle me-3">1</div>
+                <h3 class="card-title h5 fw-bold mb-0">Sesiones de 60 minutos</h3>
+              </div>
+              <p class="card-text">Cada sesión está diseñada para maximizar el aprendizaje y la práctica.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="number-circle me-3">2</div>
+                <h3 class="card-title h5 fw-bold mb-0">Charla teórica</h3>
+              </div>
+              <p class="card-text">Reglas, usos y costumbres del tiro con arco.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="number-circle me-3">3</div>
+                <h3 class="card-title h5 fw-bold mb-0">Seguridad y equipamiento</h3>
+              </div>
+              <p class="card-text">Aprenderás a manejar el equipo de forma segura y eficiente.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="number-circle me-3">4</div>
+                <h3 class="card-title h5 fw-bold mb-0">Calentamiento sin arco</h3>
+              </div>
+              <p class="card-text">Preparación física para la práctica.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="number-circle me-3">5</div>
+                <h3 class="card-title h5 fw-bold mb-0">Calentamiento con arco</h3>
+              </div>
+              <p class="card-text">En línea de tiro de corta distancia.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="number-circle me-3">6</div>
+                <h3 class="card-title h5 fw-bold mb-0">Ajuste de precisión</h3>
+              </div>
+              <p class="card-text">Mediante diferentes dinámicas de tiro.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="number-circle me-3">7</div>
+                <h3 class="card-title h5 fw-bold mb-0">Cierre de práctica</h3>
+              </div>
+              <p class="card-text">Evaluación y retroalimentación de la sesión.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Days and hours Section -->
+  <section id="equipamiento" class="py-3 bg-dark">
+    <div class="container text-white">    
+      <div class="text-center mt-2">
+        <h3 class="fw-bold mb-4">Días y Horarios</h3>
+            <p class="mb-2"><strong>Miércoles:</strong> 10:00 - 12:00 / 15:00 - 17:00</p>
+            <p class="mb-2"><strong>Sábados:</strong> 10:00 - 12:00 / 15:00 - 17:00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Section -->
+  <section id="equipamiento" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Equipamiento</h2>
+        <p class="lead">En nuestra escuela proporcionamos todo el equipamiento necesario para la práctica del tiro con arco.</p>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://placehold.co/600x400" class="card-img-top" alt="Arcos">
+            <div class="card-body">
+              <h3 class="card-title h4 fw-bold">Arcos</h3>
+              <p class="card-text">Disponemos de diferentes tipos de arcos adaptados a cada nivel y edad, desde arcos recurvos para principiantes hasta arcos de competición.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://placehold.co/600x400" class="card-img-top" alt="Flechas">
+            <div class="card-body">
+              <h3 class="card-title h4 fw-bold">Flechas</h3>
+              <p class="card-text">Flechas de diferentes materiales y calibres, adecuadas para cada tipo de arco y distancia de tiro.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://placehold.co/600x400" class="card-img-top" alt="Equipo de protección">
+            <div class="card-body">
+              <h3 class="card-title h4 fw-bold">Protección</h3>
+              <p class="card-text">Equipamiento de protección completo: protectores de brazo, dactileras, guantes y todo lo necesario para una práctica segura.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Liga Pinamarense Section -->
+  <section id="liga" class="py-5 bg-black text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-center mb-4 mb-lg-0">
+          <div class="liga-logo-container mx-auto">
+            <img src="https://placehold.co/300x300" class="img-fluid rounded-circle border border-gold p-2" alt="Logo Liga Pinamarense de Arquería 3D">
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-4 text-gold">Liga Pinamarense de Arquería 3D</h2>
+          <p class="lead mb-4">
+            La Liga Pinamarense de Arquería 3D es una competición local que reúne a los mejores arqueros de la región en un entorno natural desafiante.
+          </p>
+          <p class="mb-4">
+            Nuestros torneos 3D simulan situaciones de caza con animales de poliutireno tridimensionales que representan animales a diferentes distancias y ángulos, ofreciendo una experiencia única y emocionante para arqueros de todos los niveles.
+          </p>
+          <p class="mb-4">
+            Organizamos competiciones mensuales con diferentes categorías según edad, tipo de arco y nivel de experiencia. ¡Todos son bienvenidos a participar!
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+            <a href="#" class="btn btn-gold btn-lg">
+              Ver Ranking <i class="fas fa-trophy ms-2"></i>
+            </a>
+            <button type="button" class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#torneosModal">
+              Calendario de Torneos
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Context Section -->
+  <section id="contexto" class="py-5 bg-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4">Contexto Histórico</h2>
+          <p class="mb-4">
+            El tiro con arco era el deporte favorito de los faraones egipcios durante la XVIII dinastía (1567-1320 a.C.). Muchos siglos después, algunos de los primeros torneos de tiro con arco de los que se tiene constancia tuvieron lugar durante la dinastía Zhou (1046 - 256 a.C.) en China.
+          </p>
+          <h3 class="h4 fw-bold mb-3">Disciplina olímpica</h3>
+          <p class="mb-4">
+            El tiro con arco es un deporte con mucha historia, ya que una vez que se dejó de utilizar como un arma y como elemento de caza, pasó a ser un instrumento de competición, para medir la presición y la puntería de aquellos más virtuosos.
+          </p>
+          <p>
+            Es actualmente, una de las disciplinas más antiguas en el catálogo olímpico moderno. Debutó en la edición de París 1900, que fue apenas la segunda de la era moderna del olimpismo y desde allí ha ido evolucionando, hasta llegar a convertirse en el sofisticado deporte que es hoy.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://placehold.co/600x400" class="img-fluid rounded shadow-sm" alt="Arquero en competición olímpica">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <p class="mb-4">
+            Es una actividad particular, en la que intervienen distintos conceptos y herramientas para lograr el objetivo final de colocar una flecha lo más cerca posible del centro de un blanco, dividido en niveles siempre circulares, que se encuentra a una distancia pronunciada.
+          </p>
+          <p>
+            Lo importante a descatar del tiro con arco como actividad, es su impacto positivo en la capacidad psicomotriz de una persona, al igual que la preparación que otorga en cuanto a precisión, concentración, respiración y templanza. Todo se debe combinar para que al momento de soltar la flecha, esta se dirija donde uno pretende.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section id="ubicacion" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Nuestra Ubicación</h2>
+        <p class="lead">Encontranos en Pinamar, un entorno natural perfecto para la práctica del tiro con arco.</p>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <h3 class="h4 fw-bold mb-3">Dirección CET Pinamar</h3>
+              <div class="logo-circle mb-3">CET</div>
+
+              <p><i class="fas fa-map-marker-alt text-gold me-2"></i> Acceso por ruta: RP 11, B7167, Pinamar, Buenos Aires, Argentina</p>
+              <p><i class="fas fa-phone text-gold me-2"></i> +54 11 1234-5678</p>
+              <p><i class="fas fa-envelope text-gold me-2"></i> info@arqueriapinar.com</p>
+              
+              <h4 class="h5 fw-bold mt-4 mb-3">Cómo llegar</h4>
+              <p>Estamos ubicados a 5 minutos del centro de Pinamar, en un entorno boscoso ideal para la práctica del tiro con arco. Contamos con estacionamiento gratuito.</p>
+              
+              <h4 class="h5 fw-bold mt-4 mb-3">Horarios de atención</h4>
+              <p class="mb-1"><strong>Miercoles:</strong> 10:00 - 12:00 / 15:00 - 17:00</p>
+              <p class="mb-1"><strong>Sábados:</strong> 10:00 - 12:00 / 15:00 - 17:00</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-0">
+              <!-- Mapa de Google Maps -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3182.324916308957!2d-56.88217042349931!3d-37.097382472163815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c83031980ede5%3A0x8a87616a438259c4!2sCET%20PINAMAR!5e0!3m2!1ses!2sar!4v1747686235480!5m2!1ses!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contacto" class="py-5 bg-gold text-black">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="fw-bold">ESCUELA DE ARQUERÍA</h2>
+        <p class="lead">Listo para comenzar tu aventura en el tiro con arco? Unite a nuestro club hoy mismo!</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 mt-4">
+          <a href="#" class="btn btn-light btn-lg">
+            Inscribite Ahora <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+          <a href="#" class="btn btn-outline-light btn-lg">
+            Solicitar Información
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center mb-3">
+            <div class="logo-circle bg-white text-black me-2">CA</div>
+            <span class="h5 mb-0">Arquería Pinamar</span>
+          </div>
+          <p class="small">
+            Pinamar, el mejor lugar para aprender y practicar tiro con arco en un entorno natural único.
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-4 mb-4 mb-md-0">
+          <h5 class="h6 mb-3">Contacto</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2">Email: arqueriapinamar@gmail.com</li>
+            <li class="mb-2">Teléfono: +54 11 1234-5678</li>
+            <li>Dirección: Pinamar, Argentina</li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-4">
+          <h5 class="h6 mb-3">Síguenos</h5>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-white">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-white">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-top border-secondary mt-4 pt-4 text-center small">
+        <p class="mb-0">© <span id="current-year"></span> Arquería Pinamar. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+   <!-- Modal de Torneos -->
+   <div class="modal fade" id="torneosModal" tabindex="-1" aria-labelledby="torneosModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0">
+        <div class="modal-header bg-black text-white border-bottom border-gold">
+          <h5 class="modal-title" id="torneosModalLabel">Próximos Torneos</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th>Fecha</th>
+                  <th>Torneo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 de Junio, 2025</td>
+                  <td>Premio Otoño</td>
+                </tr>
+                <tr>
+                  <td>20 de Agosto, 2025</td>
+                  <td>Premio Invierno</td>
+                </tr>
+                <tr>
+                  <td>22 de Septiembre, 2025</td>
+                  <td>Premio Primavera</td>
+                </tr>
+                <tr>
+                  <td>5 de Noviembre, 2025</td>
+                  <td>Premio Verano + Gran Final</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-4">
+            <h6 class="fw-bold">Información importante:</h6>
+            <ul class="small">
+              <li>El recorrido consiste en 2 vueltas de 12 estaciones.</li>
+    <li>Se tiran 2 flechas por blanco, <i>excepto en algunas estacas que tendrán dos blancos distintos para disparar</i>.</li>
+    <li>La categoría Senior se divide en masculino y femenino; la categoría Escuela será mixta.</li>
+    <li>Al finalizar el torneo, cada arquero sumará puntos solo por sus dos mejores fechas, permitiendo ausencias sin quedar comprometido en la clasificación.</li>
+    <li>Los cuatro mejores de cada categoría disputarán un playoff final para definir al campeón de la liga.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-footer bg-light">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="#contacto" class="btn btn-gold" data-bs-dismiss="modal">Inscribirme</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
