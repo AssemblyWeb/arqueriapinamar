@@ -1,0 +1,62 @@
+# ========================
+# OS-Specific
+# ========================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ========================
+# Node / npm (in case you use tooling)
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# ========================
+# Editor / IDE
+# ========================
+
+# VSCode
+.vscode/
+.history/
+
+# JetBrains IDEs (WebStorm, etc.)
+.idea/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ========================
+# Build / Output
+# ========================
+dist/
+build/
+*.log
+
+# ========================
+# Others (optional)
+# ========================
+.env
+.env.local
+.env.*.local
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+*~
+
+# Git temporary files
+*.orig

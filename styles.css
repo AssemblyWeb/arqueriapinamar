@@ -5,6 +5,20 @@
   --white: #ffffff;
 }
 
+button,
+a,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+label,
+.cursor-pointer {
+  cursor: url('img/cursor2.svg') 8 8, pointer !important;
+}
+.grenze-regular {
+  font-family: "Grenze", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 body {
   font-family: "Arial", sans-serif;
   color: #333;
@@ -79,7 +93,7 @@ header {
 }
 
 .hero-carousel .carousel-item {
-  height: 600px;
+  height: 75vh;
 }
 
 .hero-carousel .carousel-item img {
@@ -92,6 +106,13 @@ header {
   transform: translateY(50%);
   padding-bottom: 0;
 }
+.hero-carousel .carousel-caption h1 {
+  text-shadow: 0px 0px 11px #e6c14f;
+}
+.hero-carousel .carousel-caption p {
+  color: white !important;
+  text-shadow: 1px 1px 0px #a37e0f;
+}
 
 .hero-overlay {
   position: absolute;
@@ -99,7 +120,7 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -214,10 +235,6 @@ footer a:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .hero-carousel .carousel-item {
-    height: 500px;
-  }
-
   .hero-carousel .carousel-caption {
     padding: 0 15px;
   }
@@ -228,9 +245,6 @@ footer a:hover {
 }
 
 @media (max-width: 576px) {
-  .hero-carousel .carousel-item {
-    height: 400px;
-  }
 
   .hero-carousel .carousel-caption h1 {
     font-size: 1.75rem;
