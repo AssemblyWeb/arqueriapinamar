@@ -296,3 +296,15 @@ footer a:hover {
 .ranking-table img {
   border: 2px solid var(--gold);
 }
+
+.ranking-container .ranking-table td {
+  align-content: center;
+}
+.ranking-img{
+  width: 60px;
+  height: 60px;
+}
+.ranking-img-xl img{
+  width: 100px;
+  height: 100px;
+}

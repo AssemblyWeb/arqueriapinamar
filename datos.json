@@ -1,0 +1,57 @@
+[
+  {
+    "nombre": "alfio perino",
+    "club": "CET",
+    "categoria": "longbow",
+    "division": "masculino",
+    "torneo1": 200,
+    "torneo2": 150,
+    "torneo3": 100,
+    "torneo4": 180,
+    "total": 380
+  },
+  {
+    "nombre": "lisa",
+    "club": "Cet",
+    "categoria": "recurvo",
+    "division": "femenino",
+    "torneo1": 100,
+    "torneo2": 400,
+    "torneo3": 300,
+    "torneo4": 0,
+    "total": 700
+  },
+  {
+    "nombre": "javier fernandez",
+    "club": "cet2",
+    "categoria": "cazador",
+    "division": "escuela",
+    "torneo1": 100,
+    "torneo2": 0,
+    "torneo3": 42,
+    "torneo4": 400,
+    "total": 500
+  },
+  {
+    "nombre": "carla",
+    "club": "villa gessel",
+    "categoria": "raso",
+    "division": "escuela",
+    "torneo1": 200,
+    "torneo2": 300,
+    "torneo3": 0,
+    "torneo4": 0,
+    "total": 500
+  },
+  {
+    "nombre": "diego",
+    "club": "cet",
+    "categoria": "longbow",
+    "division": "senior",
+    "torneo1": 1000,
+    "torneo2": 400,
+    "torneo3": 200,
+    "torneo4": 0,
+    "total": 1400
+  }
+]

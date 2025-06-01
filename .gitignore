@@ -60,3 +60,5 @@ build/
 
 # Git temporary files
 *.orig
+
+.DS_Store

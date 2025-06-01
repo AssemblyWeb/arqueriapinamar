@@ -74,17 +74,5 @@ window.addEventListener("scroll", () => {
     }
   })
 })
-// API ARQUERIA
-console.log("api")
-const API_URL = "https://corsproxy.io/?https://script.google.com/macros/s/AKfycbwtaLj-UYpMxwRvqAGFQye-4LhpcxlfNeAUdahicwl1uYFfOdbkGQO5s4svY_jd2fmkvw/exec";
-fetch(API_URL)
-    .then(res => res.json())
-    .then(data => {
-      console.log(data); // 🔍 esto imprime algo como:
-      // {
-      //   "Recurvo Raso": [{ Nombre: "Juan", Total: 255 }, ...],
-      //   "Escuela": [{ Nombre: "Laura", Total: 240 }, ...],
-      //   ...
-      // }
-    })
+
     
