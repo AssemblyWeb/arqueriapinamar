@@ -256,6 +256,9 @@ footer a:hover {
   }
 }
 /* Ranking Specific Styles */
+.ranking.nav {
+  gap: 20px;
+}
 .ranking .ranking-tab {
   color: var(--black) !important;
   background-color: transparent;

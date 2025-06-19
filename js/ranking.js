@@ -106,7 +106,7 @@ function displayRankingTable(data) {
     const contentHtml = `
         <div class="tab-content" id="rankingTabsContent">
             ${categories.map((category, index) => `
-                <div class="tab-pane fade ${index === 0 ? 'show active' : ''}"
+                <div class="tab-pane ${index === 0 ? 'show active' : ''}"
                      id="content-${category}"
                      role="tabpanel"
                      aria-labelledby="tab-${category}">
@@ -120,17 +120,17 @@ function displayRankingTable(data) {
                                             <th>Puesto</th>
                                             <th>Nombre</th>
                                             <th>Club</th>
-                                            <th>Fecha 1</th>
-                                            <th>Fecha 2</th>
-                                            <th>Fecha 3</th>
-                                            <th>Fecha 4</th>
+                                            <th>Torneo Zorro</th>
+                                            <th>Torneo Liebre</th>
+                                            <th>Torneo Pecarí</th>
+                                            <th>Torneo Ciervo</th>
                                             <th>Total</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         ${archers.map((archer, position) => `
                                             <tr class="${position < 4 ? 'top-archer' : ''}">
-                                                <td><span class="badge bg-gold">${position + 1}º</span></td>
+                                                <td><span class="badge ${position < 4 ? 'bg-gold' : 'text-black'}">${position + 1}</span></td>
                                                 <td><b>${archer.Nombre}</b></td>
                                                 <td>${archer.Club}</td>
                                                 <td>${archer['Fecha 1'] || '-'}</td>
