@@ -14,7 +14,6 @@ Este repositorio contiene el código fuente del sitio web para el Club de Arquer
 - Información sobre la Liga Pinamarense de Arquería 3D
 - Modal con calendario de próximos torneos
 - Mapa de ubicación integrado
-- Formulario de contacto
 
 ## Tecnologías Utilizadas
 
