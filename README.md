@@ -30,9 +30,10 @@ Este repositorio contiene el código fuente del sitio web para el Club de Arquer
 ```
 arqueria-pinamar/
 ├── index.html          # Página principal
-├── styles.css          # Estilos personalizados
-├── script.js           # JavaScript personalizado
+├── css/                # Estilos personalizados
+├── js/                 # JavaScript personalizado
 ├── img/                # Carpeta de imágenes
+├── pdf/                # Carpeta de documentos
 └── README.md           # Este archivo
 ```
 
