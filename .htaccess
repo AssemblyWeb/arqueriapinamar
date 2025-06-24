@@ -1,10 +1,9 @@
 RewriteEngine On
 
-# Redirigir URLs sin .html a sus archivos reales
+# 1. Redirige URLs con .html visibles a sus versiones sin .html (ej: /ranking.html → /ranking)
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html[\s?] [NC]
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# 2. Permite acceder a archivos .html usando la URL sin la extensión
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)/?$ $1.html [L]
-
-
-# Redirige /index.html a /
-RewriteCond %{THE_REQUEST} /index\.html [NC]
-RewriteRule ^index\.html$ / [R=301,L]
