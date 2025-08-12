@@ -1,32 +1,34 @@
 // Function to fetch and parse the Google Sheets data
 async function fetchRankingData() {
-    const SHEET_ID = '2PACX-1vSmel6U0j_8HOMCL6xSdaG9tHLZbSs3upjemF8yeGKP3sWp_uCEWkhS16_97nbjB32sQMY-BFSeE51m';
-    const SHEET_URL = `https://docs.google.com/spreadsheets/d/e/${SHEET_ID}/pubhtml`;
-    
+    const SHEET_ID_PROD = '2PACX-1vSmel6U0j_8HOMCL6xSdaG9tHLZbSs3upjemF8yeGKP3sWp_uCEWkhS16_97nbjB32sQMY-BFSeE51m';
+    const SHEET_ID_DEV = '2PACX-1vQQ4rf-zyDnlqtwtbPYe9nXDzZpG-Wr7-xDCYqjDQyaxCxliKd_6CRp4VeIGVsCqcLdBvm7FBtHk1ck';
+    const SHEET_URL = `https://docs.google.com/spreadsheets/d/e/${SHEET_ID_PROD}/pub?output=csv`;
     try {
         const response = await fetch(SHEET_URL);
-        const htmlText = await response.text();
+        const csvText = await response.text();
         
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(htmlText, 'text/html');
+        console.log("CSV content:", csvText.substring(0, 500));
         
-        const table = doc.querySelector('table');
-        if (!table) {
-            throw new Error('No table found in the Google Sheet');
-        }
-
-        // Skip header rows
-        let rows = Array.from(table.querySelectorAll('tr')).slice(1);
-        rows.shift();
-        
-        // Create the structured data object
+        // Parse CSV data
+        const lines = csvText.split('\n');
         const structuredData = {};
         
-        rows.forEach(row => {
-            const cells = Array.from(row.querySelectorAll('td'));
-            const categoria = cells[2]?.textContent.trim() || '';
-            const division = cells[3]?.textContent.trim() || '';
-            console.log("division", division)
+        // Skip header row (first line)
+        for (let i = 1; i < lines.length; i++) {
+            if (!lines[i].trim()) continue;
+            
+            // Split by comma and handle quoted values
+            const values = lines[i].split(',').map(v => v.replace(/"/g, '').trim());
+            
+            if (values.length < 5) continue; // Skip rows with insufficient data
+            
+            const categoria = values[2] || '';
+            const division = values[3] || '';
+            
+            if (!categoria || !division) continue; // Skip rows without category/division
+            
+            console.log("Processing:", categoria, division);
+            
             // Create category if it doesn't exist
             if (!structuredData[categoria]) {
                 structuredData[categoria] = {};
@@ -39,18 +41,24 @@ async function fetchRankingData() {
             
             // Create archer object 
             const archer = {
-                Nombre: cells[0]?.textContent.trim() || '',
-                Club: cells[1]?.textContent.trim() || '',
-                'Fecha 1': parseInt(cells[4]?.textContent) || 0,
-                'Fecha 2': parseInt(cells[5]?.textContent) || 0,
-                'Fecha 3': parseInt(cells[6]?.textContent) || 0,
-                'Fecha 4': parseInt(cells[7]?.textContent) || 0,
-                Total: parseInt(cells[8]?.textContent) || 0
+                Nombre: values[0] || '',
+                Club: values[1] || '',
+                Localidad: values[4] || '',
+                'Fecha 1': parseInt(values[5]) || 0,
+                'Fecha 2': parseInt(values[6]) || 0,
+                'Fecha 3': parseInt(values[7]) || 0,
+                'Fecha 4': parseInt(values[8]) || 0,
+                Total: parseInt(values[9]) || 0
             };
             
-            structuredData[categoria][division].push(archer);
-        });
-        console.log("structuredData", structuredData)
+            // Only add archer if they have a name
+            if (archer.Nombre) {
+                structuredData[categoria][division].push(archer);
+            }
+        }
+        
+        console.log("structuredData", structuredData);
+        
         // Sort archers by total score within each division
         Object.keys(structuredData).forEach(categoria => {
             Object.keys(structuredData[categoria]).forEach(division => {
@@ -120,6 +128,7 @@ function displayRankingTable(data) {
                                             <th>Puesto</th>
                                             <th>Nombre</th>
                                             <th>Club</th>
+                                            <th>Localidad</th>
                                             <th>Torneo Zorro</th>
                                             <th>Torneo Liebre</th>
                                             <th>Torneo Pecarí</th>
@@ -133,6 +142,7 @@ function displayRankingTable(data) {
                                                 <td><span class="badge ${position < 4 ? 'bg-gold' : 'text-black'}">${position + 1}</span></td>
                                                 <td><b>${archer.Nombre}</b></td>
                                                 <td>${archer.Club}</td>
+                                                <td>${archer.Localidad}</td>
                                                 <td>${archer['Fecha 1'] || '-'}</td>
                                                 <td>${archer['Fecha 2'] || '-'}</td>
                                                 <td>${archer['Fecha 3'] || '-'}</td>
