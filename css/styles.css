@@ -12,7 +12,7 @@ input[type="button"],
 input[type="submit"],
 label,
 .cursor-pointer {
-  cursor: url('img/cursor2.svg') 8 8, pointer !important;
+  cursor: url('../img/cursor2.svg') 8 8, pointer !important;
 }
 .grenze-regular {
   font-family: "Grenze", serif;
@@ -453,6 +453,12 @@ header {
 
 .info-item i {
   font-size: 1.2rem;
+}
+
+/* CET Icon */
+.cet-icon {
+  max-height: 175px;
+  width: auto;
 }
 
 /* Responsive adjustments */
