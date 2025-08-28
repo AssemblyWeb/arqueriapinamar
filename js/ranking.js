@@ -1,8 +1,8 @@
 // Function to fetch and parse the Google Sheets data
 async function fetchRankingData() {
-    const SHEET_ID_PROD = '2PACX-1vSmel6U0j_8HOMCL6xSdaG9tHLZbSs3upjemF8yeGKP3sWp_uCEWkhS16_97nbjB32sQMY-BFSeE51m';
+    const SHEET_ID_PROD = '2PACX-1vSmel6U0j_8HOMCL6xSdaG9tHLZbSs3upjemF8YeGKP3sWp_uCEWkhS16_97nbjB32sQMY-BFSeE51m';
     const SHEET_ID_DEV = '2PACX-1vQQ4rf-zyDnlqtwtbPYe9nXDzZpG-Wr7-xDCYqjDQyaxCxliKd_6CRp4VeIGVsCqcLdBvm7FBtHk1ck';
-    const SHEET_URL = `https://docs.google.com/spreadsheets/d/e/${SHEET_ID_PROD}/pub?output=csv`;
+    const SHEET_URL = `https://docs.google.com/spreadsheets/d/e/${SHEET_ID_DEV}/pub?output=csv`;
     try {
         const response = await fetch(SHEET_URL);
         const csvText = await response.text();
@@ -73,7 +73,25 @@ async function fetchRankingData() {
     }
 }
 
-// Helper function to generate image path from archer name
+// Function to get the top 2 tournaments for a specific archer
+function getArcherTopTournaments(archer) {
+    const tournamentScores = {
+        'Fecha 1': archer['Fecha 1'] || 0,
+        'Fecha 2': archer['Fecha 2'] || 0,
+        'Fecha 3': archer['Fecha 3'] || 0,
+        'Fecha 4': archer['Fecha 4'] || 0
+    };
+    
+    // Sort tournaments by score and get the top 2
+    const sortedTournaments = Object.entries(tournamentScores)
+        .sort(([,a], [,b]) => b - a)
+        .slice(0, 2)
+        .map(([tournament]) => tournament);
+
+    return sortedTournaments;
+}
+
+// WIP Helper function to generate image path from archer name
 function getArcherImagePath(archerName) {
   return `/img/archers/alfioperino.jpg` // COMING SOON.. TO BE RELEASED
     return `/img/archers/${archerName
@@ -137,19 +155,21 @@ function displayRankingTable(data) {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        ${archers.map((archer, position) => `
+                                        ${archers.map((archer, position) => {
+                                            const archerTopTournaments = getArcherTopTournaments(archer);
+                                            return `
                                             <tr class="${position < 4 ? 'top-archer' : ''}">
                                                 <td><span class="badge ${position < 4 ? 'bg-gold' : 'text-black'}">${position + 1}</span></td>
                                                 <td><b>${archer.Nombre}</b></td>
                                                 <td>${archer.Club}</td>
                                                 <td>${archer.Localidad}</td>
-                                                <td>${archer['Fecha 1'] || '-'}</td>
-                                                <td>${archer['Fecha 2'] || '-'}</td>
-                                                <td>${archer['Fecha 3'] || '-'}</td>
-                                                <td>${archer['Fecha 4'] || '-'}</td>
+                                                <td>${archerTopTournaments.includes('Fecha 1') ? `<strong>${archer['Fecha 1'] || '-'}</strong>` : (archer['Fecha 1'] || '-')}</td>
+                                                <td>${archerTopTournaments.includes('Fecha 2') ? `<strong>${archer['Fecha 2'] || '-'}</strong>` : (archer['Fecha 2'] || '-')}</td>
+                                                <td>${archerTopTournaments.includes('Fecha 3') ? `<strong>${archer['Fecha 3'] || '-'}</strong>` : (archer['Fecha 3'] || '-')}</td>
+                                                <td>${archerTopTournaments.includes('Fecha 4') ? `<strong>${archer['Fecha 4'] || '-'}</strong>` : (archer['Fecha 4'] || '-')}</td>
                                                 <td><strong>${archer.Total}</strong></td>
                                             </tr>
-                                        `).join('')}
+                                        `}).join('')}
                                     </tbody>
                                 </table>
                             </div>
