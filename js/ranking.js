@@ -105,6 +105,12 @@ function displayRankingTable(data) {
     const container = document.getElementById('ranking-container');
     if (!container) return;
 
+    // Hide loading container
+    const loadingContainer = document.getElementById('loading-container');
+    if (loadingContainer) {
+        loadingContainer.style.display = 'none';
+    }
+
     // Create tabs for categories
     const categories = Object.keys(data);
     
@@ -259,6 +265,20 @@ document.head.appendChild(style);
 
 // Initialize the ranking table
 document.addEventListener('DOMContentLoaded', async () => {
-    const data = await fetchRankingData();
-    displayRankingTable(data);
+    try {
+        const data = await fetchRankingData();
+        displayRankingTable(data);
+    } catch (error) {
+        console.error('Error loading ranking data:', error);
+        // Show error message if loading fails
+        const container = document.getElementById('ranking-container');
+        if (container) {
+            container.innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Error al cargar las clasificaciones. Por favor, intenta de nuevo más tarde.
+                </div>
+            `;
+        }
+    }
 });
