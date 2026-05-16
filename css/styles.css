@@ -1,8 +1,11 @@
 :root {
   --gold: #fed75d;
   --gold-dark: #e6c14f;
-  --black: #000000;
+  --yellow: #EE9D28;
+  --blue: #003853;
   --white: #ffffff;
+  --orange: #F1731F;
+  --orange-dark: #bb4b00;
 }
 
 button,
@@ -28,9 +31,18 @@ body {
 .text-gold {
   color: var(--gold) !important;
 }
+.text-orange {
+  color: var(--orange);
+}
 
 .bg-gold {
   background-color: var(--gold) !important;
+}
+.bg-blue {
+  background-color: var(--blue) !important;
+}
+.bg-orange {
+  background-color: var(--orange) !important;
 }
 
 .btn-gold {
@@ -56,7 +68,30 @@ body {
   background-color: var(--gold);
   color: var(--black);
 }
+/* btn orange */
+.btn-orange {
+  background-color: var(--orange);
+  color: var(--black);
+  border: 2px solid var(--orange);
+}
 
+.btn-orange:hover,
+.btn-orange:focus {
+  background-color: var(--orange-dark);
+  color: var(--black);
+}
+
+.btn-outline-orange {
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  background-color: transparent;
+}
+
+.btn-outline-orange:hover,
+.btn-outline-orange:focus {
+  background-color: var(--orange);
+  color: var(--black);
+}
 /* Header */
 header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -177,7 +212,7 @@ header {
 .hero-subtitle {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--yellow);
   margin-bottom: 1rem;
   opacity: 0;
   transform: translateY(20px);
@@ -300,7 +335,7 @@ header {
 }
 
 .hero-carousel .carousel-indicators button.active {
-  background-color: var(--gold);
+  background-color: var(--orange);
   border-color: var(--white);
   transform: scale(1.2);
 }
@@ -556,7 +591,7 @@ header {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: var(--gold);
+  background-color: var(--orange);
   color: var(--black);
   display: flex;
   align-items: center;
