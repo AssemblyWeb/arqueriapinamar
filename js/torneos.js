@@ -1,11 +1,13 @@
 /**
  * Calendario de torneos — única fuente de datos para index.html y ranking.html.
- * Editar fechas y nombres aquí.
+ * Editar fechas, nombres y enlace de inscripción aquí.
  */
+
+const TORNEO_INSCRIPCION_URL = "https://forms.gle/zxTU3JkjM3BthiXs9"
 
 const TORNEOS = [
   {
-    date: "2026-05-18",
+    date: "2026-06-21",
     dateLabel: "21 de Junio, 2026",
     name: "Premio Zorro",
   },
@@ -72,4 +74,13 @@ function renderTorneosModal() {
   }).join("")
 }
 
-document.addEventListener("DOMContentLoaded", renderTorneosModal)
+function applyTorneoInscripcionLinks() {
+  document.querySelectorAll("[data-torneo-inscripcion]").forEach((link) => {
+    link.href = TORNEO_INSCRIPCION_URL
+  })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderTorneosModal()
+  applyTorneoInscripcionLinks()
+})
