@@ -153,10 +153,10 @@ function displayRankingTable(data) {
                                             <th>Nombre</th>
                                             <th>Club</th>
                                             <th>Localidad</th>
-                                            <th>Torneo Zorro</th>
-                                            <th>Torneo Liebre</th>
-                                            <th>Torneo Pecarí</th>
-                                            <th>Torneo Ciervo</th>
+                                            <th>Fecha 1</th>
+                                            <th>Fecha 2</th>
+                                            <th>Fecha 3</th>
+                                            <th>Fecha 4</th>
                                             <th>Total</th>
                                         </tr>
                                     </thead>

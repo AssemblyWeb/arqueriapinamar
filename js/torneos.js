@@ -3,28 +3,28 @@
  * Editar fechas, nombres y enlace de inscripción aquí.
  */
 
-const TORNEO_INSCRIPCION_URL = "https://forms.gle/zxTU3JkjM3BthiXs9"
+const TORNEO_INSCRIPCION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSem8VFA6YgrraBqJx5Roj7SGfjIiwjQTdKISSsPOpGdUSo-fg/viewform?usp=send_form"
 
 const TORNEOS = [
   {
     date: "2026-06-21",
     dateLabel: "21 de Junio, 2026",
-    name: "Premio Zorro",
+    name: "Primera fecha",
   },
   {
-    date: "2026-07-26",
-    dateLabel: "26 de Julio, 2026",
-    name: "Premio Liebre",
+    date: "2026-09-13",
+    dateLabel: "13 de Septiembre, 2026",
+    name: "Segunda fecha",
   },
   {
-    date: "2026-08-30",
-    dateLabel: "30 de Agosto, 2026",
-    name: "Premio Pecarí",
+    date: "2026-09-30",
+    dateLabel: "A definir",
+    name: "Tercera fecha",
   },
   {
     date: "2026-10-04",
-    dateLabel: "4 de Octubre, 2026",
-    name: "Premio Ciervo",
+    dateLabel: "A definir",
+    name: "Cuarta fecha",
     nameExtra: " + <b>Gran Final</b>",
   },
 ]
