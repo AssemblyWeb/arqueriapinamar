@@ -3,7 +3,7 @@
  * Editar fechas, nombres y enlace de inscripción aquí.
  */
 
-const TORNEO_INSCRIPCION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSem8VFA6YgrraBqJx5Roj7SGfjIiwjQTdKISSsPOpGdUSo-fg/viewform?usp=send_form"
+const TORNEO_INSCRIPCION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfVIWEqUKb8I-VBDHaNszb2B2MYC3ek_-pKuNOAAjMyp6XqyQ/viewform"
 
 const TORNEOS = [
   {
