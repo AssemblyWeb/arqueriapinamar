@@ -47,7 +47,6 @@ async function fetchRankingData() {
                 'Fecha 1': parseInt(values[5]) || 0,
                 'Fecha 2': parseInt(values[6]) || 0,
                 'Fecha 3': parseInt(values[7]) || 0,
-                'Fecha 4': parseInt(values[8]) || 0,
                 Total: parseInt(values[9]) || 0
             };
             
@@ -79,7 +78,6 @@ function getArcherTopTournaments(archer) {
         'Fecha 1': archer['Fecha 1'] || 0,
         'Fecha 2': archer['Fecha 2'] || 0,
         'Fecha 3': archer['Fecha 3'] || 0,
-        'Fecha 4': archer['Fecha 4'] || 0
     };
     
     // Sort tournaments by score and get the top 2
@@ -156,7 +154,6 @@ function displayRankingTable(data) {
                                             <th>Fecha 1</th>
                                             <th>Fecha 2</th>
                                             <th>Fecha 3</th>
-                                            <th>Fecha 4</th>
                                             <th>Total</th>
                                         </tr>
                                     </thead>
@@ -172,7 +169,6 @@ function displayRankingTable(data) {
                                                 <td>${archerTopTournaments.includes('Fecha 1') ? `<strong>${archer['Fecha 1'] || '-'}</strong>` : (archer['Fecha 1'] || '-')}</td>
                                                 <td>${archerTopTournaments.includes('Fecha 2') ? `<strong>${archer['Fecha 2'] || '-'}</strong>` : (archer['Fecha 2'] || '-')}</td>
                                                 <td>${archerTopTournaments.includes('Fecha 3') ? `<strong>${archer['Fecha 3'] || '-'}</strong>` : (archer['Fecha 3'] || '-')}</td>
-                                                <td>${archerTopTournaments.includes('Fecha 4') ? `<strong>${archer['Fecha 4'] || '-'}</strong>` : (archer['Fecha 4'] || '-')}</td>
                                                 <td><strong>${archer.Total}</strong></td>
                                             </tr>
                                         `}).join('')}
